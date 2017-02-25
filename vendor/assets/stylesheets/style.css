@@ -2046,12 +2046,16 @@ a.to-top {
 /*-- Products-Page-Styling --*/
 
 .products-content {
-	background: url("../images/testimonial.jpg");
+	background: url("../images/footer.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	height: 390px;
+}
+.LOGO {/*-- 新加的内容20170225 --*/
+ padding-top: 30px;
+
 }
 a.products {
 	margin-left: 150px;

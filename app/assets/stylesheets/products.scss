@@ -4,6 +4,7 @@
 
 
 
+
 /*商品列表*/
 .productList-wrap {
   width: 1220px;
@@ -53,7 +54,8 @@
 .productDetail-left {
 	float: left; /*你去左边*/
 	width: 420px;
-	height: 518px;
+	height: 420px;
+  border: 1px solid #50514F;
 }
 
 .productDetail-right {
@@ -86,7 +88,7 @@
 .productDecription {
 	width: 1200px;
 	margin: 20px auto;
-	border: 1px solid #50514F;
+	border: 0 solid #50514F;
 }
 
 .productDecription-menuList {

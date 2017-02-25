@@ -133,4 +133,17 @@
  }
 
 
- 
+ @-webkit-keyframes spin {
+   	  0% { -webkit-transform: rotateY(0); }
+   	100% { -webkit-transform: rotateY(360deg); }
+ }
+
+ .csstransforms3d.cssanimations section {
+   	-webkit-perspective: 1000;
+ }
+ .csstransforms3d.cssanimations section h4 {
+   	background-image: url(modernizr-logo.png);
+   	overflow: hidden;
+   	-webkit-animation: spin 2s linear infinite;
+    padding: 20px;
+ }
