@@ -236,7 +236,8 @@
 <div class="row">
   <% @products.each do |product| %>
     <div class="col-sm-3">
-      <%= link_to product_path(product) do %>
+			<div class="productList-item">
+			<%= link_to product_path(product) do %>
         <% if product.photos.present? %>
           <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
         <% else %>
@@ -246,8 +247,11 @@
       <%= product.title %> ¥ <%= product.price %>
 				<p class="productList-item-desc mt5 f12"><%= product.description %></p>
     </div>
+	</div>
   <% end %>
-
+</div>
+</div>
+</div>
 
 		</body>
 
