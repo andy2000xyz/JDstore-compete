@@ -1,4 +1,22 @@
-<body bg-color="#DB4886">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   .container {
+       padding: 80px 120px;
+   }
+   </style>
+ </head>
+
+ <body>
+
 <div class="productDetail">
   <div class="productDetail-left bg-color1">
      <!-- multi-pics -->
@@ -19,11 +37,6 @@
   </div>
 
 
-  <!-- Supportive-JavaScript -->
-  <script src="assets/modernizr.js"></script>
-  <!-- //Supportive-JavaScript -->
-
-
   <div class="productDetail-right bg-color2">
     <h2> <%= @product.title %> </h2>
     <div style="height:100px;">
@@ -31,11 +44,11 @@
         <%= @product.description %>
       </p>
     </div>
-    <div> 数量 : <%= @product.quantity %> </div>
+    <div> Quantity : <%= @product.quantity %> </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
     <div class="pull-right">
      <% if @product.quantity.present? && @product.quantity > 0 %>
-        <%= link_to("Add to Cart", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+        <%= link_to("Add to Cart", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger" ) %>
         <% else %>
             已销售一空，无法购买
         <% end %>
@@ -43,15 +56,40 @@
   </div>
 </div>
 
-        <div class="csstransforms3d.cssanimations">
-            <section>
-              <h4>Detail Information</h4>
-            </section>
-          </div>
+<div class="container text-center">
+  <h3>Customer Feedback</h3>
+  <p><em>We love VS STUDIO!</em></p>
+
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>Laddy Gaga</strong></p><br>
+      <img src="images/customer-LADY.jpg" class="img-circle person" alt="">
+      <p>They realized my dream！</p>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Owen</strong></p><br>
+      <img src="images/customer-Owen.jpg" class="img-circle person" alt="">
+      <p>They realized my dream！</p>
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Leonardo</strong></p><br>
+      <img src="images/customer-Leonardo.jpg" class="img-circle person" alt="">
+      <p>They realized my dream！</p>
+    </div>
+  </div>
+</div>
+
+    <div class="csstransforms3d.cssanimations">
+        <h3>Detail Information</h3>
+    </div>
 
   <div class="productDecription">
 
     <iframe width="100%" height="480" src="https://www.youtube.com/embed/j53_KDSA1H4" frameborder="0" allowfullscreen></iframe>
   </div>
 
-</body>
+
+    <!-- Supportive-JavaScript -->
+    <script src="assets/modernizr.js"></script>
+    <!-- //Supportive-JavaScript -->
