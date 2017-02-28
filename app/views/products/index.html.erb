@@ -199,6 +199,29 @@
 		</script>
 	</div>
 
+	<div class="container">
+		<h2>VIP service</h2>
+		<div id="mi-slider3" class="mi-slider">
+	<div class="row">
+	  <% @products.each do |product| %>
+	    <div class="col-sm-3">
+				<div class="productList-item">
+				<%= link_to product_path(product) do %>
+	        <% if product.photos.present? %>
+	          <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+	        <% else %>
+	          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail",) %>
+					<% end %>
+	      <% end %>
+	      <%= product.title %> ¥ <%= product.price %>
+					<p class="productList-item-desc mt5 f12"><%= product.description %></p>
+	    </div>
+		</div>
+	  <% end %>
+	</div>
+	</div>
+	</div>
+
 <!-- Custom-JavaScript-File-Links -->
 
 	<!-- Default-Supportive-JavaScript --> <script type="text/javascript" src="assets/jquery.min.js"></script>
@@ -233,31 +256,22 @@
 <!-- //Custom-JavaScript-File-Links -->
 
 
-<div class="container">
-	<h2>VIP service</h2>
-	<div id="mi-slider3" class="mi-slider">
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-sm-3">
-			<div class="productList-item">
-			<%= link_to product_path(product) do %>
-        <% if product.photos.present? %>
-          <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail",) %>
-				<% end %>
-      <% end %>
-      <%= product.title %> ¥ <%= product.price %>
-				<p class="productList-item-desc mt5 f12"><%= product.description %></p>
-    </div>
-	</div>
-  <% end %>
-</div>
-</div>
-</div>
+<script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[i] = m[i] || function() {
+            (m[i].a = m[i].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = '//static.meiqia.com/dist/meiqia.js';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 50525);
+</script>
 
-		</body>
-
+</body>
 
 
 </html>
