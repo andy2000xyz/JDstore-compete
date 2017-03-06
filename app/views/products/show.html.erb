@@ -48,13 +48,8 @@
           <p><i class="fa fa-share-alt" aria-hidden="true"></i> Share </p>
       </div>
       <div class="col-md-4" style="margin-left:-40px;">
-         
-        <div class='social-share-button' data-title='Fashion' data-img=''
-    data-url='' data-desc='' data-via=''>
-    <a rel="nofollow " data-site="weibo" class="ssb-icon ssb-weibo" onclick="return SocialShareButton.share(this);" title="Share to Sina Weibo" href="#"></a>
+      <%= social_share_button_tag(@product.title) %>
 
-    <a rel="nofollow " data-site="wechat" class="ssb-icon ssb-wechat" onclick="return SocialShareButton.share(this);" title="Share to WeChat" data-wechat-footer="Open your WeChat, click &quot;Discover&quot; button then click the &quot;Scan QR Code&quot; menu." href="#"></a>
-    </div>
       </div>
 
     </div>
