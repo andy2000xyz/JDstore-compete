@@ -42,6 +42,7 @@ gem 'seo_helper'
 gem 'letter_opener', group: :development
 gem 'aasm'
 gem 'figaro'
+gem 'social-share-button'
 gem 'fog'
 gem "fog-aws"
 
