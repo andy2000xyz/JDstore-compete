@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+ *= require social-share-button
  */
 
  .thumbnail {
@@ -25,6 +27,7 @@
  @import "camera";
  @import "style";
  @import "swipebox";
+ @import "social-share-button";
 
  nav{
  width:auto;/*撑满*/
