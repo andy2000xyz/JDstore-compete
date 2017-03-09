@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require bootstrap/alert
 //= require bootstrap-sprockets
 //= require bootstrap/dropdown
@@ -39,5 +39,3 @@
 
 //= require social-share-button
 //= require social-share-button/wechat
-
-//= require_tree .
