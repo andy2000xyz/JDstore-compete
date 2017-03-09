@@ -1,3 +1,7 @@
+
+
+ <body>
+
 <div class="productDetail">
   <div class="productDetail-left bg-color1">
      <!-- multi-pics -->
@@ -17,6 +21,7 @@
     <!-- multi-pics -->
   </div>
 
+
   <div class="productDetail-right bg-color2">
     <h2> <%= @product.title %> </h2>
     <div style="height:100px;">
@@ -24,24 +29,45 @@
         <%= @product.description %>
       </p>
     </div>
-    <div> 数量 : <%= @product.quantity %> </div>
+    <div> Quantity : <%= @product.quantity %> </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
     <div class="pull-right">
      <% if @product.quantity.present? && @product.quantity > 0 %>
-        <%= link_to("Add to Cart", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
+        <%= link_to("Add to Cart", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger" ) %>
         <% else %>
             已销售一空，无法购买
         <% end %>
     </div>
+
+    <div class="row share">
+      <hr>
+      <div class="col-md-4">
+          <p> Collection popularity（3） </p>
+      </div>
+      <div class="col-md-3 ">
+          <p><i class="fa fa-share-alt" aria-hidden="true"></i> Share </p>
+      </div>
+      <div class="col-md-4" style="margin-left:-40px;">
+      <%= social_share_button_tag(@product.title) %>
+
+      </div>
+
+    </div>
   </div>
+
 </div>
 
-<div class="productDecription">
-  <ul class="productDetail-tabList bg-gray clearfix">Detail Information</ul>
-  <div class="productDecription-content bg-color3">
+
+
+
+
+    <div class="csstransforms3d.cssanimations">
+        <h3>Detail Information</h3>
+    </div>
+
+  <div class="productDecription">
+
     <iframe width="100%" height="480" src="https://www.youtube.com/embed/j53_KDSA1H4" frameborder="0" allowfullscreen></iframe>
   </div>
 
-</div>
-
-<div class="footer bg-color1"></div>
+</body>

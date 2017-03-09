@@ -33,8 +33,8 @@ input[type="button"], input[type="submit"], button.btn, button.btn:hover {
 }
 
 h1 {
-	margin: 0;
-	padding: 0;
+	margin: 15px;
+	padding: 15px;
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 50px
@@ -66,8 +66,8 @@ h4 {
 }
 
 h5 {
-	margin: 0;
-	padding: 0;
+	margin: 15px;
+	padding: 15px;
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px
@@ -2046,12 +2046,16 @@ a.to-top {
 /*-- Products-Page-Styling --*/
 
 .products-content {
-	background: url("../images/testimonial.jpg");
+	background: url("../images/footer.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	height: 390px;
+}
+.LOGO {/*-- 新加的内容20170225 --*/
+ padding-top: 30px;
+
 }
 a.products {
 	margin-left: 150px;

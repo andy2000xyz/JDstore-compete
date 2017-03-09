@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require bootstrap/alert
 //= require bootstrap-sprockets
 //= require bootstrap/dropdown
@@ -37,4 +37,5 @@
 //= require waypoints.min
 //= require wow.min
 
-//= require_tree .
+//= require social-share-button
+//= require social-share-button/wechat

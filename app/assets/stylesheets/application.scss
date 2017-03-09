@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+ *= require social-share-button
  */
 
  .thumbnail {
@@ -25,6 +27,7 @@
  @import "camera";
  @import "style";
  @import "swipebox";
+ @import "social-share-button";
 
  nav{
  width:auto;/*撑满*/
@@ -133,4 +136,88 @@
  }
 
 
- 
+
+
+
+
+ /****** Modernizr test ******/
+
+//   .borderradius #content {
+//     	border: 1px solid #141414;
+//     	-webkit-border-radius: 12px;
+//     	-moz-border-radius: 12px;
+//     	border-radius: 12px;
+//   }
+//   .boxshadow #content {
+//     	border: none;
+//     	-webkit-box-shadow: rgba(0,0,0, .5) 3px 3px 6px;
+//     	-moz-box-shadow: rgba(0,0,0, .5) 3px 3px 6px;
+//     	box-shadow: rgba(0,0,0, .5) 3px 3px 6px;
+//   }
+//
+//
+//  h1 {
+//   	color: #e33a89;
+//   	font: 27px/27px Baskerville, Palatino, "Palatino Linotype",
+//   	"Book Antiqua", Georgia, serif;
+//   	margin: 0;
+//   	text-shadow: #aaa 5px 5px 5px;
+// }
+//
+// @font-face {
+//   	src: url(Beautiful-ES.ttf);
+//   	font-family: "Beautiful";
+// }
+//
+// .fontface h1 {
+//   	font: 42px/50px Beautiful;
+//   	text-shadow: none;
+// }
+
+// .csscolumns ol.features {
+//   	-moz-column-count: 2;
+//   	-webkit-columns: 2;
+//   	-o-columns: 2;
+//   	columns: 2;
+//   }
+//
+// .no-csscolumns ol.features {
+//   	float: left;
+//   	margin: 0 0 20px;
+//   }
+//
+// .no-csscolumns ol.features li {
+//   	float: left;
+//   	width: 180px;
+// }
+
+@-webkit-keyframes spin {
+     0% { -webkit-transform: rotateY(0); }
+   100% { -webkit-transform: rotateY(360deg); }
+}
+
+.csstransforms3d.cssanimations section {
+   -webkit-perspective: 1000;
+}
+.csstransforms3d.cssanimations section img {
+   background-image: url(modernizr-logo.png);
+   overflow: hidden;
+   -webkit-animation: spin 6s linear infinite;
+   padding: 20px;
+}
+
+
+
+
+
+.img-circle.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+}
+
+.img-circle.person:hover {
+    border-color: #f1f1f1;
+}
