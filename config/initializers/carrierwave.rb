@@ -21,8 +21,6 @@ CarrierWave.configure do |config|
 
     config.fog_directory  = ENV["AWS_BUCKET_NAME"] # 你设定的 bucket name
 
-
-
   else
     config.storage :file
   end
