@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/blog'
   get 'static_pages/echart'
+  get 'products/new_index'
 
   devise_for :users
 
