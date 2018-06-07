@@ -39,3 +39,8 @@
 
 //= require social-share-button
 //= require social-share-button/wechat
+
+
+//= require echarts
+//= require dark
+//= require semantic

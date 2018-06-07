@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root 'welcome#index'
+
+  get 'static_pages/blog'
+  get 'static_pages/echart'
+
   devise_for :users
 
   namespace :admin do
