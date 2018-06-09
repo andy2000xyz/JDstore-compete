@@ -150,3 +150,159 @@ a.btn:hover{
   opacity:0.5;
   color:#fff;
 }
+
+
+
+/*-- Products-Page-Styling --*/
+
+.products-content {
+	background: url("../images/testimonial.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height: 390px;
+}
+a.products {
+	margin-left: 150px;
+	font-family: 'Francois One', sans-serif;
+	font-size: 50px;
+	color: #ee2899;
+}
+p.products {
+	color: #EEE;
+	text-align: center;
+	padding: 0 200px;
+	line-height: 30px;
+	margin-top: 50px;
+}
+h1.products, h1.gallery {
+	font-size: 50px;
+	font-weight: 600;
+	margin-top: 50px;
+	color: #03A9F4;
+	letter-spacing: 1px;
+}
+#womens-wear h2 {
+	padding-top: 50px;
+}
+.main-2 {
+	margin-top: 0;
+}
+.main h2 {
+	text-align: left;
+	padding-left: 150px;
+	background-color: #FFFFFF;
+}
+
+/*-- Products-Page-Responsive --*/
+
+@media only screen and (max-width: 1280px) {
+	p.products {
+		padding: 0 160px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	p.products {
+		padding: 0 145px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	p.products {
+		padding: 0 130px;
+	}
+}
+
+@media only screen and (max-width: 966px) {
+	p.products {
+		padding: 0 117px;
+	}
+}
+
+@media only screen and (max-width: 853px) {
+	a.products {
+		margin-left: 120px;
+	}
+	p.products {
+		padding: 0 60px;
+	}
+	.main h2 {
+		padding-left: 80px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	p.products {
+		padding: 0 34px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	p.products {
+		padding: 0 20px;
+	}
+}
+
+@media only screen and (max-width: 736px) {
+	a.products {
+		margin-left: 80px;
+	}
+	p.products {
+		padding: 0 70px;
+	}
+	.main h2 {
+		padding-left: 10px;
+		padding-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 667px) {
+	p.products {
+		padding: 0 38px;
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	p.products {
+		padding: 0 25px;
+	}
+}
+
+@media only screen and (max-width: 603px) {
+	p.products {
+		padding: 0 27px;
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 568px) {
+	a.products {
+		font-size: 40px;
+	}
+	p.products {
+		padding: 0 10px;
+		margin-top: 30px;
+	}
+}
+
+@media only screen and (max-width: 533px) {
+	p.products {
+		padding: 0 30px;
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	a.products {
+		font-size: 30px;
+	}
+	p.products {
+		padding: 0 5px;
+		line-height: 27px;
+	}
+}
+
+/*-- //Products-Page-Responsive --*/
+
+/*-- //Products-Page-Styling --*/
