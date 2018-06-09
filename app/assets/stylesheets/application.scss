@@ -18,20 +18,19 @@
 
 
  @import "bootstrap";
- @import "bootstrap.min";
  @import "bootstrap-sprockets";
  @import "bootstrap/theme";
  @import "font-awesome";
-
+ @import "bootstrap.min";
  @import "camera";
  @import "style";
  @import "swipebox";
  @import "social-share-button";
  @import "products";
- // @import "base";
 
 
- nav{
+
+ nav {
  width:auto;/*撑满*/
  height:35px;
  background:rgba(255,255,255,0);/*为了便于查看区域范围大小，故而加个背景色*/
