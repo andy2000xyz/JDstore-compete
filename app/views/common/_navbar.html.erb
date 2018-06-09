@@ -1,15 +1,14 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/"><i class="fa fa-flask" aria-hidden="true"></i></a>
-
+            <a class="navbar-brand" href="/" title="首页"  rel="home" id="logo"><i class="fa fa-flask" aria-hidden="true"></i></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active">
+            <li>
               <a class="navbar-products" href="/products">学习</a>
               <!-- <%= link_to(content_tag(:i, 'Products', class: 'fa fa-camera'), products_path, method: :get) %> 两种写法都可以-->
             </li>
@@ -20,7 +19,7 @@
                <a class="navbar-products" href="/static_pages/blog">博客</a>
             </li>
             <li>
-               <a class="navbar-products" href="/products/new_index">测试页面</a>
+               <a class="navbar-products" href="/products/new_index"></a>
             </li>
           </ul>
           <form class="navbar-form navbar-left" role="search">

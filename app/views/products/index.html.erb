@@ -1,60 +1,46 @@
 
 <!--产品影片demo，经过试验简化后的代码-->
 <div class="products-content">
-	<div class="LOGO">
-		<a class="products">Data lab</a>
+	<div class="container-fluid">
+		<h1 class="products">实战案例</h1>
+		<h4 class="products">在这里，您将看到数据分析如何创造价值，改变生活。</h4>
 	</div>
-	<p class="products">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-	<h1 class="products">PRODUCTS</h1>
 </div>
-
-
 
 <br>
 
-<div class="container">
-	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<div class="row clearfix">
-				<div class="col-md-12 column">
-					<h3 class="text-center">
-						h3. 这是一套可视化布局系统.
-					</h3>
-					<p class="text-center">
-						 <em>Git</em> 是一个分布式的版本控制系统，最初由 <strong>Linus Torvalds</strong> 编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在 <small>Ruby</small> 社区中。
-					</p>
-					<div class="row">
-						<% @products.each do |product| %>
-							<div class="col-md-4">
-								<div class="thumbnail" style="background: #fff; border: 1px solid #f1f1f1; padding: 0">
-									<div>
-									<%= link_to product_path(product) do %>
-						        <% if product.photos.present? %>
-						          <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
-						        <% else %>
-						          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-										<% end %>
-						      <% end %>
-									</div>
-									<div class="caption">
-									<div>
-										<h3 style="margin: 5px"><%= product.title %></h3>
-										<p class="productList-item-desc mt5 f12"><%= product.description %></p>
-									</div>
-										<div class="meta" style=style="border-top: 2px solid #f1f1f1;">
-											<span>2018-06-04</span>
-											<span class="pull-right">1小时58分</span>
-										</div>
-									</div>
-								</div>
-				    	</div>
-						<% end %>
+
+	<div class="container">
+		<div class="row">
+			<% @products.each do |product| %>
+				<div class="col-md-4">
+					<div class="thumbnail" style="background: #fff; border: 1px solid #f1f1f1; padding: 0">
+
+						<div>
+						<%= link_to product_path(product) do %>
+			        <% if product.photos.present? %>
+			          <%= image_tag(product.photos[0].avatar.thumb.url, class: "thumbnail") %>
+			        <% else %>
+			          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+							<% end %>
+			      <% end %>
+						</div>
+
+						<div class="caption">
+							<div class="productList-item-name">
+								<h4><%= product.title %></h4>
+								<p class="productList-item-desc mt5 f15"><%= product.description %></p>
+							</div>
+							<hr>
+							<div class="meta" style=style="margin: 15px; border-top: 2px solid #f1f1f1;">
+								<span><%= product.created_at %></span>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
+	    	</div>
+			<% end %>
 		</div>
 	</div>
-</div>
 
 
 	<!-- <div class="container">
