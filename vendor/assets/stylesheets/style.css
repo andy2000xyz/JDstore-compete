@@ -105,8 +105,6 @@ a:focus, a:hover {
 
 
 
-
-
 /*-- Index-Page-Styling --*/
 
 
@@ -140,7 +138,7 @@ a:focus, a:hover {
 /*-- About --*/
 
 .agileaboutaitsabout {
-	padding: 100px 0;
+	padding: 60px 0 120px 0;
 	/*--w3layouts--*/
 	/*--agileits--*/
 	background-color: #333;
@@ -166,9 +164,8 @@ a:focus, a:hover {
 .agileaboutaits-video-1 {
 	width: 100%;
 	position: absolute;
-	padding: 30px;
-	top: 0%;
-	right: 0;
+	padding: inherit;
+
 }
 
 .agileaboutaits h2 {
@@ -182,7 +179,7 @@ a:focus, a:hover {
 	text-align: right;
 	line-height: 30px;
 	color: #CCC;
-	margin: 15px;
+	margin: 15px 0;
 }
 
 .agileaboutaits button.btn {
@@ -848,7 +845,7 @@ input.margin-right {
 /*-- Footer --*/
 
 .footer {
-	background: #000000;
+	background: #272727;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
