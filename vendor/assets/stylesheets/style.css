@@ -111,15 +111,19 @@ a:focus, a:hover {
 
 /*-- Header --*/
 
-.agileheaderw3ls {
+/* .agileheaderw3ls {
 	padding-bottom: 800px;
-}
+} */
 
 /*-- //Header --*/
 
 
 
 /*-- Slider --*/
+.w3slideraits {
+
+}
+
 
 .camera_caption h1 {
 	font-weight: 100;
@@ -139,42 +143,24 @@ a:focus, a:hover {
 
 
 .agileaboutaitsabout {
-	padding: 60px 0 120px 0;
+	margin: 0;
+	padding: 0;
 	/*--w3layouts--*/
 	/*--agileits--*/
 	background-color: #333;
 }
 
-.agileaboutaits-info {
-	padding-left: 0;
+video {
+	max-width: 100%;
+	height: auto;
+	padding: 50px;
 }
 
-.agileaboutaits-image-1 {
-	width: 100%;
-	position: relative;
-	float: left;
-}
-
-.agileaboutaits-image-2 {
-	width: 45%;
-	position: absolute;
-	top: 0%;
-	right: 0;
-}
-
-.agileaboutaits-video-1 {
-	width: 100%;
-	height: 80%;
-	position: absolute;
-	padding: inherit;
-
-}
-
-.agileaboutaits h2 {
+.agileaboutaits h4 {
 	text-align: right;
 	color: #FFF;
 	margin: 15px 0 0 0;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .agileaboutaits p {
@@ -203,15 +189,6 @@ a:focus, a:hover {
 
 .agileaboutaits button.btn .glyphicon {
 	margin-left: 5px;
-}
-
-.modal-title {
-	font-size: 30px;
-}
-
-.modal-body p {
-	margin: 25px 0 10px;
-	color: #000;
 }
 
 /*-- //About --*/
@@ -772,12 +749,12 @@ a:focus, a:hover {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	color: #FFF;
-	padding-top: 50px;
+	padding-top: 0;
 }
 
 .footer-grids {
 	text-align: left;
-	margin: 40px 0 30px;
+	margin: 30px 0 30px;
 }
 
 .footer h3 {
@@ -800,8 +777,6 @@ a:focus, a:hover {
 	color: #CCC;
 	font-family: 'Open Sans', sans-serif;
 }
-
-
 
 
 address {

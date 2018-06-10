@@ -12,6 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.min
+//= require jquery.easing.1.3
+//= require jquery.flexslider
+//= require jquery.inview.min
+//= require jquery.mobile.customized.min
+//= require jquery.swipebox.min
 
 //= require bootstrap.min
 //= require bootstrap/alert
@@ -23,12 +29,7 @@
 //= require cbpFWTabs
 //= require counterup.min
 //= require easing
-//= require jquery.min
-//= require jquery.easing.1.3
-//= require jquery.flexslider
-//= require jquery.inview.min
-//= require jquery.mobile.customized.min
-//= require jquery.swipebox.min
+
 
 //= require echarts
 //= require dark
