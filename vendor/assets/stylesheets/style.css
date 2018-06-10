@@ -60,7 +60,7 @@ h3 {
 h4 {
 	margin: 0;
 	padding: 0;
-	text-align: center;
+
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20px
 }
@@ -68,7 +68,7 @@ h4 {
 h5 {
 	margin: 0;
 	padding: 0;
-	text-align: center;
+
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px
 }
@@ -137,6 +137,7 @@ a:focus, a:hover {
 
 /*-- About --*/
 
+
 .agileaboutaitsabout {
 	padding: 60px 0 120px 0;
 	/*--w3layouts--*/
@@ -163,6 +164,7 @@ a:focus, a:hover {
 
 .agileaboutaits-video-1 {
 	width: 100%;
+	height: 80%;
 	position: absolute;
 	padding: inherit;
 
@@ -754,91 +756,7 @@ a:focus, a:hover {
 
 
 
-/*-- Booking --*/
 
-.w3layoutsbooking {
-	padding: 100px 0;
-	background-color: #EEE;
-}
-
-.w3layoutsbooking h3 {
-	text-align: left;
-	margin-bottom: 30px;
-}
-
-.w3layoutsbooking .container {
-	padding: 0;
-}
-
-.booking-form-aits {
-	background-color: #FFF;
-	padding: 100px;
-}
-
-.booking-form-aits input[type="text"], .booking-form-aits input[type="email"], .booking-form-aits textarea {
-	width: 49%;
-	float: left;
-	padding: 15px 0;
-	margin-bottom: 20px;
-	border: none;
-	/*--w3layouts--*/
-	/*--agileits--*/
-	color: #000;
-	border-bottom: 2px solid #777;
-	font-weight: 600;
-	outline: none;
-}
-
-input.margin-right {
-	margin-right: 18px;
-}
-
-.booking-form-aits textarea {
-	width: 100%;
-	height: 150px;
-	margin-bottom: 30px;
-}
-
-.send-button button.btn {
-	font-weight: 600;
-	color: #EEE;
-	padding: 10px 30px;
-	border: none;
-	outline: none;
-	background-color: #333;
-	border-radius: 0;
-}
-
-.send-button button.btn:hover {
-	color: #FFF;
-	background-color: #000;
-}
-
-.send-button button.btn .glyphicon {
-	margin-left: 10px;
-}
-
-.booking-form-aits ::-webkit-input-placeholder {
-	color: #555;
-}
-
-.booking-form-aits ::-moz-placeholder {
-	color: #555;
-}
-
-.booking-form-aits ::-moz-placeholder {
-	color: #555;
-}
-
-.booking-form-aits ::-ms-input-placeholder {
-	color: #555;
-}
-
-.send-button.agileits.w3layouts {
-	text-align: center;
-}
-
-/*-- //Booking --*/
 
 
 

@@ -7,7 +7,10 @@
 
 /*商品列表*/
 .productList-wrap {
-  width: 1220px;
+  padding: 20px 0;
+  width: auto;
+  height:auto;
+  background-color: #eee;
 }
 .productList {
   margin-bottom: 0;
@@ -63,7 +66,7 @@
 .productDetail-right {
 	float: right; /*你去右边*/
 	width: 744px;
-	height: 518px;
+	height: 420px;
 }
 
 .productDetail-left-bigImage {
@@ -89,7 +92,8 @@
 /*商品详情*/
 .productDecription {
 	width: 1200px;
-	margin: 20px auto;
+	margin: 20px 0;
+  padding: 20px 0;
 	border: 0 solid #50514F;
 }
 
@@ -109,14 +113,28 @@
 	margin: 50px auto;
 }
 
+.product-price {
+  color: #fc0202;
+  font-size: 25px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  padding-top:30px;
+}
 
+.product-quantity {
 
+}
 //收藏
 
 /* show page */
 
 .show-page .row{
+  margin: 0;
+}
+
+.show-page .description{
   margin-left: 0;
+  height: 50px;
 }
 
 div.social-share-button {
@@ -181,6 +199,7 @@ h1.products, h1.gallery {
 	margin-top: 100px;
 	color: #03A9F4;
 	letter-spacing: 1px;
+  font-size: 50px;
 }
 h4.products {
   font-weight: 100;
@@ -188,6 +207,7 @@ h4.products {
 	color: #ffffff;
 	letter-spacing: 1px;
 	padding-top: 10px;
+  font-size: 20px;
 }
 .main-2 {
 	margin-top: 0;
