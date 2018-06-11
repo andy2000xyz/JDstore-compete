@@ -2,12 +2,12 @@
 <html>
 <head>
   <title>JDstore 后台</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true, :async => true%>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <%= render "common/navbar" %>
     <div class="row">
       <div class="col-md-2">
@@ -16,7 +16,7 @@
           <li> <%= link_to("Orders", admin_orders_path) %> </li>
         </ul>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-8">
         <%= yield %>
       </div>
     </div>

@@ -10,32 +10,25 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
+
 //= require jquery.min
+//= require jquery_ujs
+//= require bootstrap.min
+//= require bootstrap-sprockets
+
+//= require ckeditor/init
+
+
 //= require jquery.easing.1.3
 //= require jquery.flexslider
 //= require jquery.inview.min
 //= require jquery.mobile.customized.min
 //= require jquery.swipebox.min
 
-//= require bootstrap.min
-//= require bootstrap/alert
-//= require bootstrap-sprockets
-//= require bootstrap/dropdown
-//= require bootstrap/modal
-
-//= require ckeditor/init
-
 //= require camera
 //= require cbpFWTabs
 //= require counterup.min
 //= require easing
-
-
-//= require echarts
-//= require dark
-
 //= require main
 //= require modernizr
 //= require mousescroll
@@ -43,7 +36,12 @@
 //= require waypoints.min
 //= require wow.min
 
+//= require echarts
+//= require dark
+
 //= require social-share-button
 //= require social-share-button/wechat
 
 //= require cable
+
+//= require_tree .

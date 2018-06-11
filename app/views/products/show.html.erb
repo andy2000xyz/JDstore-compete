@@ -1,76 +1,71 @@
 
-
-<div class="productDetail">
-  <div class="row">
-    <div class="productDetail-left bg-color1">
-       <!-- multi-pics -->
-      <% if @photos.present? %>
-        <% @photos.each_with_index do |p, index| %>
-          <% if index == 0 %>
-            <%= image_tag p.avatar.medium.url %>
-            <div style="letter-spacing: -8px">
-          <% else %>
-            <%= image_tag p.avatar.thumb.url %>
-          <% end %>
-        <% end %>
-        </div>
-      <% else %>
-          <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-      <% end %>
-      <!-- multi-pics -->
-    </div>
-
-
-    <div class="productDetail-right">
-      <h3 class="f30 pb20"> <%= @product.title %> </h3>
-        <div class="show-page description">
-        <p><%= @product.description %></p>
-        </div>
-        <!-- <div class="product-quantity"> 数量 : <%= @product.quantity %>
-        </div> -->
-        <div class="product-price"> ￥ <%= @product.price %>
-        </div>
-        <div class="pull-left">
-         <% if @product.quantity.present? && @product.quantity > 0 %>
-            <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger" ) %>
-            <% else %>
-                已销售一空，无法购买
-            <% end %>
-        </div>
-        <div class="row mt100">
-          <div class="col-md-4">
-            <p> <i class="fa fa-heart" aria-hidden="true"></i> 收藏（3）</p>
-          </div>
-          <div class="col-md-4" style="margin-left:-40px;">
-            <%= social_share_button_tag(@product.title) %>
-          </div>
-        </div>
-    </div>
-  </div>
-
-
-<hr>
-  <div class="productDecription">
+  <div class="productDetail">
     <div class="row">
-      <div class="col-md-8 col-sm-4">
-        <ul>
-          <li>
-            
-            <p><%= sanitize @product.detail %></p>
-          </li>
-        </ul>
+      <div class="productDetail-left bg-color1">
+        <% if @photos.present? %>
+          <% @photos.each_with_index do |p, index| %>
+            <% if index == 0 %>
+              <%= image_tag p.avatar.medium.url %>
+              <div style="letter-spacing: -8px">
+            <% else %>
+              <%= image_tag p.avatar.thumb.url %>
+            <% end %>
+          <% end %>
+          </div>
+        <% else %>
+            <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+        <% end %>
       </div>
-      <div class="col-md-4 col-sm-4">
-        <div class="aside" style="border-left: 1px solid #CCC; padding: 0 10px">
-          <p>发布于:</p><span><%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %></span>
-          <p>更新于:</p><span><%= @product.updated_at.strftime("%Y/%m/%d %I:%M %p") %></span>
-          <h4 class="f20 p20">相关课程</h4>
-            <li>Excel</li>
-            <li>Power Query</li>
-            <li>Power Pivot</li>
+
+
+      <div class="productDetail-right">
+        <h3 class="f30 pb20"> <%= @product.title %> </h3>
+          <div class="show-page description">
+          <p><%= @product.description %></p>
+          </div>
+          <!-- <div class="product-quantity"> 数量 : <%= @product.quantity %>
+          </div> -->
+          <div class="product-price"> ￥ <%= @product.price %>
+          </div>
+          <div class="pull-left">
+           <% if @product.quantity.present? && @product.quantity > 0 %>
+              <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger" ) %>
+              <% else %>
+                  已销售一空，无法购买
+              <% end %>
+          </div>
+          <div class="row mt100">
+            <div class="col-md-4">
+              <p> <i class="fa fa-heart" style="color: red" aria-hidden="true"></i> 收藏（3）</p>
+            </div>
+            <div class="col-md-4" style="margin-left:-40px;">
+              <%= social_share_button_tag(@product.title) %>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+  <hr>
+    <div class="productDecription">
+      <div class="row">
+        <div class="col-md-9 col-sm-4">
+          <ul>
+            <li>
+              <p><%= sanitize @product.detail %></p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-4">
+          <div class="aside" style="border-left: 1px solid #CCC; padding: 0 10px">
+            <p>发布于:</p><span><%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %></span>
+            <p>更新于:</p><span><%= @product.updated_at.strftime("%Y/%m/%d %I:%M %p") %></span>
+            <h4 class="f20 p20">相关课程</h4>
+              <li>Excel</li>
+              <li>Power Query</li>
+              <li>Power Pivot</li>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-</div>
