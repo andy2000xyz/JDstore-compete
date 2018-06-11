@@ -55,18 +55,15 @@
       <div class="col-md-8 col-sm-4">
         <ul>
           <li>
-            <h4 class="f20 pb20">适用人群</h4>
-            <p>每天被工作PPT所困扰的职场人</p>
-
-            <h4 class="f20 pt20 pb20">课程概述</h4>
-            <p>本课程专注于提升职场人的办公效率，500强企业内训师带你解决与工作场景相关的各种PPT疑难杂症！</p>
+            
+            <p><%= sanitize @product.detail %></p>
           </li>
         </ul>
       </div>
       <div class="col-md-4 col-sm-4">
         <div class="aside" style="border-left: 1px solid #CCC; padding: 0 10px">
-          <p>发布于:</p><span><%= @product.created_at %></span>
-          <p>更新于:</p><span><%= @product.updated_at %></span>
+          <p>发布于:</p><span><%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %></span>
+          <p>更新于:</p><span><%= @product.updated_at.strftime("%Y/%m/%d %I:%M %p") %></span>
           <h4 class="f20 p20">相关课程</h4>
             <li>Excel</li>
             <li>Power Query</li>

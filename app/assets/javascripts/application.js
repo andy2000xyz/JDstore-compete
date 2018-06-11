@@ -25,6 +25,8 @@
 //= require bootstrap/dropdown
 //= require bootstrap/modal
 
+//= require ckeditor/init
+
 //= require camera
 //= require cbpFWTabs
 //= require counterup.min

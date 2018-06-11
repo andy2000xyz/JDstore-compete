@@ -46,7 +46,7 @@ gem 'figaro'
 gem 'social-share-button'
 gem 'fog'
 gem "fog-aws"
-
+gem 'ckeditor'
 
 
 
