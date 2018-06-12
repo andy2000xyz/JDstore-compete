@@ -10,23 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
- *= require font-awesome
- *= require social-share-button
+
  */
 
  @import "bootstrap-sprockets";
  @import "bootstrap.min";
  @import "bootstrap";
  @import "font-awesome";
- @import "camera";
  @import "style";
- @import "swipebox";
  @import "social-share-button";
  @import "products";
- // @import "base";
-
 
 
  nav {

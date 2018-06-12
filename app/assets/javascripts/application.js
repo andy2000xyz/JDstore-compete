@@ -12,24 +12,21 @@
 //
 
 //= require jquery.min
-//= require jquery_ujs
-//= require bootstrap.min
 //= require bootstrap-sprockets
+//= require bootstrap.min
+
 
 //= require ckeditor/init
 
+//= require jquery_ujs
 
-//= require jquery.easing.1.3
 //= require jquery.flexslider
 //= require jquery.inview.min
-//= require jquery.mobile.customized.min
-//= require jquery.swipebox.min
 
 
-//= require camera
 //= require cbpFWTabs
 //= require counterup.min
-//= require easing
+
 //= require main
 //= require modernizr
 //= require mousescroll

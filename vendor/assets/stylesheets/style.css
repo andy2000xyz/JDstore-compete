@@ -118,27 +118,6 @@ a:focus, a:hover {
 /*-- //Header --*/
 
 
-
-/*-- Slider --*/
-.w3slideraits {
-
-}
-
-
-.camera_caption h1 {
-	font-weight: 100;
-	text-align: center;
-	/*--w3layouts--*/
-	/*--agileits--*/
-}
-
-.camera_caption h3 a {
-	color: #009688;
-}
-
-/*-- //Slider --*/
-
-
 /*-- About --*/
 
 
@@ -998,12 +977,7 @@ a.to-top {
 	.agileheaderw3ls {
 		padding-bottom: 504px;
 	}
-	.camera_caption > div {
-		padding: 35px 20px;
-	}
-	.camera_caption h3 {
-		font-size: 30px;
-	}
+
 	.agileaboutaitsabout, .w3threespecialityw3ls, .progressive-effects, .portfolio, .w3layoutsbooking {
 		padding: 75px 0;
 	}
@@ -1159,9 +1133,7 @@ a.to-top {
 	.agileheaderw3ls {
 		padding-bottom: 376px;
 	}
-	.camera_caption h3 {
-		font-size: 30px;
-	}
+
 	.agileaboutaitsabout, .w3threespecialityw3ls, .progressive-effects, .portfolio, .w3layoutsbooking {
 		padding: 50px 0;
 	}
@@ -1245,9 +1217,7 @@ a.to-top {
 	.agileheaderw3ls {
 		padding-bottom: 325px;
 	}
-	.camera_caption h3 {
-		font-size: 30px;
-	}
+
 	.gallery-top figure.effect-bubba h4 {
 		padding-top: 13%;
 	}
@@ -1367,9 +1337,7 @@ a.to-top {
 	.agileheaderw3ls {
 		padding-bottom: 258px;
 	}
-	.camera_caption h3 {
-		font-size: 20px;
-	}
+
 	.gallery-top figure.effect-bubba h4 {
 		padding-top: 6%;
 	}
