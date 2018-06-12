@@ -1,0 +1,27 @@
+<h1><%= t("admin.blog_list") %></h1>
+
+<p class="text-right">
+<%= link_to "New Blog", new_admin_blog_path, :class => "btn btn-primary" %>
+</p>
+
+
+<table class="table">
+<thead>
+<tr>
+  <th>Blog Title</th>
+  <th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<% @blogs.each do |blog| %>
+  <tr>
+    <td>
+      <%= link_to blog.title, admin_blog_path(blog) %>
+    </td>
+    <td>
+      <%= link_to "Edit", edit_admin_blog_path(blog), :class => "btn btn-default" %>
+      <%= link_to "Delete", admin_blog_path(blog), :method => "delete", :data => { :confirm => "Are you sure?" }, :class => "btn btn-danger" %>
+  </tr>
+<% end %>
+</tbody>
+</table>

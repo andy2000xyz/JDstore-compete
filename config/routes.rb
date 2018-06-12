@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
-
-  get 'static_pages/blog'
-  get 'static_pages/echart'
-
 
   devise_for :users
 
   namespace :admin do
+    resources :blogs
+
     resources :products
     resources :orders do
       member do
@@ -18,6 +15,8 @@ Rails.application.routes.draw do
      end
    end
   end
+
+  resources :blogs
 
   resources :products do
     member do
@@ -46,6 +45,9 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  get 'static_pages/echart'
+
+  root 'welcome#index'
 end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

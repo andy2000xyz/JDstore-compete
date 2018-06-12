@@ -1,0 +1,12 @@
+<h2> Edit Blog </h2>
+
+<%= simple_form_for [:admin, @blog] do |f| %>
+
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+  <div class="form-group">
+    <%= f.submit "Update", :class => "btn btn-primary" %>
+    <%= link_to "Cancel", admin_blogs_path %>
+  </div>
+
+<% end %>

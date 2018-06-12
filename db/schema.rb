@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180610153644) do
+ActiveRecord::Schema.define(version: 20180611105915) do
+
+  create_table "blogs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "category"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "row_order"
+    t.index ["row_order"], name: "index_blogs_on_row_order"
+  end
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
