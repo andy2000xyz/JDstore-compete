@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   end
 
   get 'static_pages/echart'
+  get 'static_pages/new_echart'
 
   root 'welcome#index'
 end
