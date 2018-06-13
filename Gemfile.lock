@@ -51,6 +51,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    brakeman (4.3.1)
     builder (3.2.3)
     byebug (10.0.2)
     carrierwave (1.2.2)
@@ -402,6 +403,7 @@ DEPENDENCIES
   aasm
   autoprefixer-rails
   bootstrap-sass
+  brakeman
   byebug
   carrierwave
   ckeditor
