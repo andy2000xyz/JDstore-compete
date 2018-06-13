@@ -38,7 +38,10 @@
             <span class="glyphicon glyphicon-search"></span>
           </button>
         </span>
-      </div>
+      </div><br>
+      <div class="previous"><%= link_to "上一篇：#{@previous.title}", blog_path(@previous) %></div>
+      <div class="next"><%= link_to "下一篇：#{@next.title}", blog_path(@next) %></div>
+
     </div>
 
     <div class="col-md-9">
