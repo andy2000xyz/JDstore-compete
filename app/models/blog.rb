@@ -2,10 +2,6 @@ class Blog < ApplicationRecord
   include RankedModel
   ranks :row_order
 
-  # def blog_list
-  #   blogs = Blog.all
-  #   blog_list = blogs.all.order('created_at DESC').first
-  # end
 
   def previous_blog
     previous_blogs = Blog.where [ 'created_at < ?', self.created_at ]

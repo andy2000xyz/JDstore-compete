@@ -7,6 +7,5 @@ class BlogsController < ApplicationController
     @blog = Blog.find(params[:id])
     @previous = @blog.previous_blog
     @next = @blog.next_blog
-    # @blog_list =@blog.blog_list
   end
 end

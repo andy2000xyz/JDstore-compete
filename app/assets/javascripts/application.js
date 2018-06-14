@@ -19,19 +19,16 @@
 //= require ckeditor/init
 
 //= require jquery_ujs
-
 //= require jquery.flexslider
 //= require jquery.inview.min
 
 
 //= require cbpFWTabs
-//= require counterup.min
-
 //= require main
 //= require modernizr
 //= require mousescroll
 //= require move-top
-//= require waypoints.min
+
 //= require wow.min
 
 //= require echarts
@@ -41,5 +38,3 @@
 //= require social-share-button/wechat
 
 //= require cable
-
-//= require_tree .
