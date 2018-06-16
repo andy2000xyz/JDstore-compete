@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   devise_for :users
 
   namespace :admin do
@@ -20,7 +19,9 @@ Rails.application.routes.draw do
     collection do
       get :search
     end
+    resources :comments
   end
+
 
   resources :products do
     member do

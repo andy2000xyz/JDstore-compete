@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  def blog
+  def new_echart
 
   end
 

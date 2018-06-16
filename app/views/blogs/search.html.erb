@@ -2,22 +2,30 @@
 <div class="container" style="height: 600px">
   <div class="row content">
     <div class="col-md-3 sidenav">
-      <%= render :partial => "blogs/search_bar" %>
+      <%= render :partial => "blogs/search_bar" %><br>
+      <%= link_to("返回",blogs_path) %>
     </div>
+
 
     <div class="col-md-9">
 
       <div class="search-result">
-
-        <h4> 搜索结果 </h4><br>
-
+        <% if @blogs.present? %>
+          <h5 class="collection search-count">已为您找到<%= @blogs.count %>篇相关文章</h5>
+        <% else %>
+          <p class="tc mt100">未搜索到任何文章，要不换个关键词试试？</p>
+        <% end %>
+      </div><br>
+      <div>
         <table class="table table-borderd">
-          <% @blogs.each do |blog| %>
+          <h4><% @blogs.each do |blog| %>
             <%= link_to(render_highlight_content(blog,@query_string),blog_path(blog)) %>
-            <hr>
-          <% end %>
+            <% end %>
+          </h4>
         </table>
+      <hr>
       </div>
     </div>
+
   </div>
 </div>

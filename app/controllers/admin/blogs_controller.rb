@@ -6,7 +6,7 @@ class Admin::BlogsController < ApplicationController
   before_action :admin_required
 
   def index
-    @blogs = Blog.rank(:row_order).all
+    @blogs = Blog.all
   end
 
   def show
@@ -60,7 +60,7 @@ class Admin::BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :author,:content)
+    params.require(:blog).permit(:title, :author, :content)
   end
 
 end

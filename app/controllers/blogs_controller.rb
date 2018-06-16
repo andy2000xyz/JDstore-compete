@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
 before_action :validate_search_key, only: [:search]
 
   def index
-    @blogs = Blog.rank(:row_order).all
+    @blogs = Blog.all
   end
 
   def show

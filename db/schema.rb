@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180611105915) do
+ActiveRecord::Schema.define(version: 20180616065328) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180611105915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "row_order"
+    t.integer  "blog_id"
     t.index ["row_order"], name: "index_blogs_on_row_order"
   end
 
@@ -34,6 +35,16 @@ ActiveRecord::Schema.define(version: 20180611105915) do
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "blog_id"
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_comments_on_blog_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -93,6 +104,7 @@ ActiveRecord::Schema.define(version: 20180611105915) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
+    t.integer  "user_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
