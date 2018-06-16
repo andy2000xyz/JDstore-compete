@@ -48,6 +48,7 @@ gem 'fog'
 gem "fog-aws"
 gem 'ckeditor'
 gem 'ranked-model'
+gem 'will_paginate'
 
 
 

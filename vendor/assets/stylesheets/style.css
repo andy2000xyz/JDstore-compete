@@ -402,7 +402,8 @@ video {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	color: #FFF;
-	padding-top: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .footer-grids {

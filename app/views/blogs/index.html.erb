@@ -1,10 +1,18 @@
-<h1><%= "blog_list" %></h1>
 
-<ul>
-  <% @blogs.each do |blog| %>
-    <li>
-      <%= link_to blog.title, blog_path(blog) %>
-      <%= blog.created_at.strftime("%Y/%m/%d %I:%M %p") %>
-    </li>
-  <% end %>
-</ul>
+
+<h1><%= "历史文章" %></h1>
+
+<div class="container" style="height: 600px">
+  <div class="row">
+    <div class="col-md-12">
+      <ul>
+        <% @blogs.each do |blog| %>
+          <li>
+            <%= link_to blog.title, blog_path(blog) %>
+            <%= blog.created_at.strftime("%Y/%m/%d %I:%M %p") %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

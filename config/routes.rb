@@ -16,7 +16,11 @@ Rails.application.routes.draw do
    end
   end
 
-  resources :blogs
+  resources :blogs do
+    collection do
+      get :search
+    end
+  end
 
   resources :products do
     member do
