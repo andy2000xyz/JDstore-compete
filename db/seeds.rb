@@ -15,15 +15,3 @@ u.password_confirmation = "123456"   # 最少要六码
 
 u.is_admin = true
 u.save
-
-
-blogs = [{title:"Power BI 实战",
-	        content: "用Power BI解决商业问题。"},
-
-					{title:"滴滴面试题",
-	        content: "学会这种分析方法，就能去滴滴面试了。"}]
-
-
-
-
-puts "create blogs"

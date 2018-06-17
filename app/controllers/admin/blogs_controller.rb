@@ -45,17 +45,17 @@ class Admin::BlogsController < ApplicationController
     redirect_to admin_blogs_path
   end
 
-  def bulk_update
-    total = 0
-    Array(params[:ids]).each do |blog_id|
-      blog = Blog.find(blog_id)
-      blog.destroy
-      total += 1
-    end
+  # def bulk_update
+  #   total = 0
+  #   Array(params[:ids]).each do |blog_id|
+  #     blog = Blog.find(blog_id)
+  #     blog.destroy
+  #     total += 1
+  #   end
 
-    flash[:alert] = "成功完成 #{total} 笔"
-    redirect_to admin_blogs_path
-  end
+  #   flash[:alert] = "成功完成 #{total} 笔"
+  #   redirect_to admin_blogs_path
+  # end
 
   private
 
