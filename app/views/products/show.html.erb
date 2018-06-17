@@ -19,7 +19,7 @@
 
 
       <div class="productDetail-right">
-        <h3 class="f30 pb20"> <%= @product.title %> </h3>
+        <h3> <%= @product.title %> </h3>
           <div class="show-page description">
           <p><%= @product.description %></p>
           </div>
@@ -31,15 +31,17 @@
            <% if @product.quantity.present? && @product.quantity > 0 %>
               <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger" ) %>
               <% else %>
-                  已销售一空，无法购买
+                已销售一空，无法购买
               <% end %>
           </div>
-          <div class="row mt100">
-            <div class="col-md-4">
-              <p> <i class="fa fa-heart" style="color: red" aria-hidden="true"></i> 收藏（3）</p>
-            </div>
-            <div class="col-md-4" style="margin-left:-40px;">
-              <%= social_share_button_tag(@product.title) %>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <p> <i class="fa fa-heart" style="color: red" aria-hidden="true"></i> 收藏（3）</p>
+              </div>
+              <div class="col-md-3">
+                <%= social_share_button_tag(@product.title) %>
+              </div>
             </div>
           </div>
       </div>
@@ -50,17 +52,16 @@
     <div class="productDecription">
       <div class="row">
         <div class="col-md-9 col-sm-4">
-          <ul>
-            <li>
-              <p><%= sanitize @product.detail %></p>
-            </li>
-          </ul>
+
+          <p><%= sanitize @product.detail %></p>
+
         </div>
         <div class="col-md-3 col-sm-4">
-          <div class="aside" style="border-left: 1px solid #CCC; padding: 0 10px">
+          <div class="aside" style="border-left: 1px solid #CCC; padding: 0 20px ">
             <p>发布于:</p><span><%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %></span>
             <p>更新于:</p><span><%= @product.updated_at.strftime("%Y/%m/%d %I:%M %p") %></span>
-            <h4 class="f20 p20">相关课程</h4>
+
+            <h4>相关课程</h4>
               <li>Excel</li>
               <li>Power Query</li>
               <li>Power Pivot</li>

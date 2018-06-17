@@ -2,9 +2,8 @@ class Blog < ApplicationRecord
   # include RankedModel
   # ranks :row_order
 
-  validates :title, presence: true,
-            length: { minimum: 3 }
-  has_many :comments
+  validates :title, presence: true, length: { minimum: 3 }
+  has_many :comments, dependent: :destroy
 
   def previous_blog
     previous_blogs = Blog.where [ 'created_at < ?', self.created_at ]

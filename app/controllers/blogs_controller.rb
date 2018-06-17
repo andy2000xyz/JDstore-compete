@@ -10,6 +10,7 @@ before_action :validate_search_key, only: [:search]
     @blog = Blog.find(params[:id])
     @previous = @blog.previous_blog
     @next = @blog.next_blog
+    @blogs = Blog.all
   end
 
   def search

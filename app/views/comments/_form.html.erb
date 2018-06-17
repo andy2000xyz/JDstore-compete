@@ -1,9 +1,9 @@
-<h4>Leave a Comment:</h4>
+
 <%= form_for([@blog, @blog.comments.build]) do |f| %>
 <form role="form">
     <p>
       <%= f.label :commenter %><br>
-      <%= f.text_field :user_id %>
+      <%= f.text_field :commenter %>
     </p>
     <p>
       <%= f.label :body %><br>

@@ -2,11 +2,16 @@
 <div class="row">
   <% @blog.comments.each do |comment| %>
   <div class="col-sm-2 text-center">
-    <img src="bandmember.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+    <img src="#" class="img-circle" height="65" width="65" alt="Avatar">
   </div>
   <div class="col-sm-10">
-    <h4><%= comment.user_id %> <small><%= @blog.created_at.strftime("%Y/%m/%d %I:%M %p") %></small></h4>
+    <h4><%= comment.commenter %> <small><%= @blog.created_at.strftime("%Y/%m/%d %I:%M %p") %></small></h4>
     <p><%= comment.body %></p>
     <br>
   </div>
+  <p>
+    <%= link_to "Delete", [comment.blog, comment],
+        method: :destroy,
+        data: { confirm: "are you sure?"} %>
+  </p>
 <% end %>

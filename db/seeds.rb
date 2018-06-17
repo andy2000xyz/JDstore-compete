@@ -17,25 +17,13 @@ u.is_admin = true
 u.save
 
 
-products = [{title:"Power BI 实战",
-	        description: "用Power BI解决商业问题.",
-	        image_path: "#{Rails.root}/public/images/datalab-1.png"},
+blogs = [{title:"Power BI 实战",
+	        content: "用Power BI解决商业问题。"},
 
-					{title:"Power BI 实战",
-	        description: "用Power BI解决商业问题.",
-	        image_path: "#{Rails.root}/public/images/datalab-2.png"},
-
-					{title:"Power BI 实战",
-	        description: "用Power BI解决商业问题.",
-	        image_path: "#{Rails.root}/public/images/datalab-3.png"}]
+					{title:"滴滴面试题",
+	        content: "学会这种分析方法，就能去滴滴面试了。"}]
 
 
 
 
-p1 = Product.create([title:products[0][:title],description:products[0][:description],quantity:999,price:199,image:open(products[0][:image_path])])
-p2 = Product.create([title:products[1][:title],description:products[1][:description],quantity:999,price:199,image:open(products[1][:image_path])])
-p3 = Product.create([title:products[2][:title],description:products[2][:description],quantity:999,price:199,image:open(products[2][:image_path])])
-
-
-
-puts "create products"
+puts "create blogs"

@@ -26,7 +26,15 @@
       <%= render :partial => "blogs/search_bar" %>
       <br>
       <div class="previous"><%= link_to "上一篇：#{@previous.title}", blog_path(@previous) %></div>
-      <div class="next"><%= link_to "下一篇：#{@next.title}", blog_path(@next) %></div>
+      <div class="next"><%= link_to "下一篇：#{@next.title}", blog_path(@next) %></div><br>
+      <h4>历史文章</h4>
+      <ul>
+        <% @blogs.each do |blog| %>
+          <li>
+            <%= link_to blog.title, blog_path(blog) %>
+          </li>
+        <% end %>
+      </ul>
 
     </div>
 
@@ -41,11 +49,10 @@
 
       <hr>
 
-      <p><span class="badge"><%= @blog.comments.count %></span> Comments:</p><br>
-
+      <h4>Leave a Comment:</h4>
       <%= render "comments/form" %><br>
+      <p><span class="badge"><%= @blog.comments.count %></span> Comments:</p><br>
       <%= render "comments/comment" %>
-      <%= yield %>
 
     </div>
   </div>
