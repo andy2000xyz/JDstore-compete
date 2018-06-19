@@ -1,18 +1,28 @@
 
-
-  <h2>作品集</h2><br>
-
-  <div class="container" style="height: 600px">
-    <div class="row">
-      <div class="col-md-12">
-        <ul>
+<h2>作品集</h2><br>
+<div class="container" style="height: 600px">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>文章标题</th>
+            <th>文章分类</th>
+            <th>文章作者</th>
+            <th>发表时间</th>
+          </tr>
+        </thead>
+        <tbody>
           <% @blogs.each do |blog| %>
-            <li>
-              <%= link_to blog.title, blog_path(blog) %>
-              <%= blog.created_at.strftime("%Y/%m/%d %I:%M %p") %>
-            </li>
+          <tr>
+            <td><%= link_to blog.title, blog_path(blog) %></td>
+            <td><%= link_to blog.category.try(:name), blog_path(blog) %></td>
+            <td><%= link_to blog.author, blog_path(blog) %></td>
+            <td><%= blog.created_at.strftime("%Y/%m/%d %I:%M %p") %></td>
+          </tr>
           <% end %>
-        </ul>
-      </div>
+        </tbody>
+      </table>
     </div>
   </div>
+</div>

@@ -30,7 +30,7 @@ before_action :validate_search_key, only: [:search]
 
 
   def search_criteria(query_string)
-    { :title_cont => query_string }
+    { :title_or_content_cont => query_string }
   end
 
 end

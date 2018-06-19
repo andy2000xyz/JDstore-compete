@@ -1,14 +1,14 @@
 
 <head>
-  <title>Blog</title>
+  <title>Li jian's Blog</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- <link rel="stylesheet" href="assets/bootstrap.min.css"> -->
-  <!-- <script src="assets/jquery.min.js"></script> -->
-  <!-- <script src="assets/bootstrap.min.js"></script> -->
+  <!-- <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <script src="assets/jquery.min.js"></script>
+  <script src="assets/bootstrap.min.js"></script> -->
 
 </head>
 <body>
@@ -28,13 +28,13 @@
       <div class="previous"><%= link_to "上一篇：#{@previous.title}", blog_path(@previous) %></div>
       <div class="next"><%= link_to "下一篇：#{@next.title}", blog_path(@next) %></div><br>
       <h4>历史文章</h4>
-      <ul>
+      <ol class="list-unstyled">
         <% @blogs.each do |blog| %>
           <li>
             <%= link_to blog.title, blog_path(blog) %>
           </li>
         <% end %>
-      </ul>
+      </ol>
 
     </div>
 
@@ -51,9 +51,9 @@
       <hr>
 
       <h4>Leave a Comment:</h4>
-      <%= render "comments/form" %><br>
+      <%= render :partial => "comments/form" %><br>
       <p><span class="badge"><%= @blog.comments.count %></span> Comments:</p><br>
-      <%= render "comments/comment" %>
+      <%= render :partial => "comments/comment" %>
 
     </div>
   </div>

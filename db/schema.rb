@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180619051942) do
+ActiveRecord::Schema.define(version: 20180619141825) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20180619051942) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "row_order"
-    t.integer  "blog_id"
     t.integer  "category_id"
     t.index ["category_id"], name: "index_blogs_on_category_id"
     t.index ["row_order"], name: "index_blogs_on_row_order"
@@ -113,7 +112,6 @@ ActiveRecord::Schema.define(version: 20180619051942) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
-    t.integer  "user_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

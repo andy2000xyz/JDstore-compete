@@ -1,64 +1,59 @@
 <nav class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/" title="首页"  rel="home" id="logo"><i class="fa fa-flask" aria-hidden="true"></i></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li>
-              <a class="navbar-products" href="/products">学习</a>
-              <!-- <%= link_to(content_tag(:i, 'Products', class: 'fa fa-camera'), products_path, method: :get) %> 两种写法都可以-->
-            </li>
-            <li>
-               <a class="navbar-products" href="/static_pages/echart">图表</a>
-            </li>
-            <li>
-               <a class="navbar-products" href="/blogs">博客</a>
-            </li>
-          </ul>
-          <!-- <form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="搜索..">
-						</div>
-					</form> -->
-
-            <ul class="nav navbar-nav navbar-right">
-               <li>
-                 <%= link_to carts_path do  %>
-                 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
-                 <% end %>
-               </li>
-                    <% if !current_user %>
-                      <li><a href="#" data-toggle="modal" data-target="#signup-modal"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-
-                      <li><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
-                        <% else %>
-                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                      Hi!, <%= current_user.email %>
-                                      <b class="caret"></b>
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                    <% if current_user.admin? %>
-                                    <li>
-                                       <%= link_to("Admin 选单", admin_products_path ) %>
-                                     </li>
-                                    <% end %>
-                                    <li>
-                                      <%= link_to("个人订单列表", account_orders_path ) %>
-                                    </li>
-                                    <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
-                                  </ul>
-                                </li>
-                              <% end %>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+  <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/" title="首页"  rel="home" id="logo"><i class="fa fa-flask" aria-hidden="true"></i></a>
     </div>
-    <!-- /.container-fluid -->
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="navbar-products" href="/products">学习</a>
+          <!-- <%= link_to(content_tag(:i, 'Products', class: 'fa fa-camera'), products_path, method: :get) %> 两种写法都可以-->
+        </li>
+        <li>
+           <a class="navbar-products" href="/static_pages/echart">图表</a>
+        </li>
+        <li>
+           <a class="navbar-products" href="/blogs">博客</a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+         <li>
+           <%= link_to carts_path do  %>
+           <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+           <% end %>
+         </li>
+            <% if !current_user %>
+              <li><a href="#" data-toggle="modal" data-target="#signup-modal"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+
+              <li><a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+            <% else %>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Hi!, <%= current_user.email %>
+                  <b class="caret"></b>
+                </a>
+                  <ul class="dropdown-menu">
+                    <% if current_user.admin? %>
+                    <li>
+                       <%= link_to("Admin 选单", admin_products_path ) %>
+                     </li>
+                    <% end %>
+                    <li>
+                      <%= link_to("个人订单列表", account_orders_path ) %>
+                    </li>
+                    <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
+                  </ul>
+              </li>
+            <% end %>
+      </ul>
+    </div>
+      <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>
 
 <!-- 以下代码添加在最后 -->

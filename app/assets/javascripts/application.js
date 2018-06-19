@@ -32,7 +32,7 @@
 //= require wow.min
 
 //= require echarts
-//= require dark
+
 
 //= require social-share-button
 //= require social-share-button/wechat
