@@ -425,6 +425,7 @@ video {
 .footer h5 {
 	width: 65%;
 	margin: 0 auto;
+	text-align: left;
 	/*--w3layouts--*/
 	/*--agileits--*/
 	line-height: 30px;

@@ -4,6 +4,7 @@ class Blog < ApplicationRecord
 
   validates :title, presence: true, length: { minimum: 3 }
   has_many :comments, dependent: :destroy
+  belongs_to :category, :optional => true
 
   def previous_blog
     previous_blogs = Blog.where [ 'created_at < ?', self.created_at ]

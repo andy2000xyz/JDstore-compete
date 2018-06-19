@@ -1,0 +1,9 @@
+<h2> New Category </h2>
+
+<%= simple_form_for [:admin, @category] do |f| %>
+
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>

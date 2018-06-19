@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :blogs
+    resources :categories
 
     resources :products
     resources :orders do
@@ -51,7 +52,7 @@ Rails.application.routes.draw do
   end
 
   get 'static_pages/echart'
-  get 'static_pages/new_echart'
+
 
   root 'welcome#index'
 end

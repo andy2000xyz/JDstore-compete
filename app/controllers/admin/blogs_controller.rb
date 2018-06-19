@@ -60,7 +60,7 @@ class Admin::BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :author, :content)
+    params.require(:blog).permit(:title, :author, :content, :category_id)
   end
 
 end

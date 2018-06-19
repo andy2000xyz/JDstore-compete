@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180617012844) do
+ActiveRecord::Schema.define(version: 20180619051942) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
     t.string   "author"
     t.string   "category"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "row_order"
     t.integer  "blog_id"
+    t.integer  "category_id"
+    t.index ["category_id"], name: "index_blogs_on_category_id"
     t.index ["row_order"], name: "index_blogs_on_row_order"
   end
 
@@ -33,6 +35,12 @@ ActiveRecord::Schema.define(version: 20180617012844) do
   end
 
   create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
