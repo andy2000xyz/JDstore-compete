@@ -158,3 +158,15 @@
 .img-circle.person:hover {
     border-color: #f1f1f1;
 }
+
+/****** SocialShareButton ******/
+
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
