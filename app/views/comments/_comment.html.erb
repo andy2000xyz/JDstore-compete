@@ -8,9 +8,9 @@
     <h4><%= comment.blog_id %></h4>
     <p><%= comment.body %></p>
     <br>
-    <p>
+    <p class="pull-right">
       <%= link_to "Delete", [comment.blog, comment],
-          method: :delete,
+          method: :delete, class: "btn btn-danger",
           data: { confirm: "are you sure?"} %>
     </p>
   </div>

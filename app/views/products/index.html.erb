@@ -2,7 +2,7 @@
 <!--产品影片demo，经过试验简化后的代码-->
 <div class="products-content">
 	<div class="container-fluid">
-		<h1 class="products">实战案例</h1>
+		<h1 class="products" style="text-align: center">实战案例</h1>
 		<h4 class="products text-center">在这里，您将看到数据分析如何创造价值，改变生活。</h4>
 	</div>
 </div>
@@ -27,12 +27,12 @@
 
 							<div class="caption">
 								<div class="productList-item-name">
-									<h4 class="f20 p20"><%= product.title %></h4>
-									<p class="productList-item-desc mt5 f15"><%= product.description %></p>
+									<h4><%= product.title %></h4><br>
+									<p class="productList-item-desc"><%= product.description %></p>
 								</div>
 								<hr>
 								<div class="meta" style=style="margin: 15px; border-top: 2px solid #f1f1f1;">
-									<span><%= product.created_at.strftime("%Y/%m/%d %I:%M %p") %></span>
+									<span>发布时间：<%= product.created_at.strftime("%Y/%m/%d %I:%M %p") %></span>
 								</div>
 							</div>
 						</div>

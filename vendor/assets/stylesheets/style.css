@@ -4,7 +4,7 @@ body {
 	padding: 0;
 	margin: -15px;
 	background: #FFF;
-	font-family: 'Open Sans', sans-serif;
+
 }
 
 body a {
@@ -32,51 +32,8 @@ input[type="button"], input[type="submit"], button.btn, button.btn:hover {
 	-ms-transition: 0.5s all;
 }
 
-h1 {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 50px
-}
-
-
-h2 {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 40px
-}
-
-h3 {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 30px
-}
-
-h4 {
-	margin: 0;
-	padding: 0;
-
-	font-family: 'Montserrat', sans-serif;
-	font-size: 20px
-}
-
-h5 {
-	margin: 0;
-	padding: 0;
-
-	font-family: 'Montserrat', sans-serif;
-	font-size: 14px
-}
-
-
 p {
-	margin: 0;
-	font-family: 'Roboto', sans-serif;
+	margin: 10px 0;
 	font-weight: 300;
 	font-size: 14px;
 }
@@ -94,8 +51,6 @@ img {
 	width: 100%;
 }
 
-
-
 a:focus, a:hover {
 	text-decoration: none;
 	outline: none;
@@ -106,16 +61,6 @@ a:focus, a:hover {
 
 
 /*-- Index-Page-Styling --*/
-
-
-
-/*-- Header --*/
-
-/* .agileheaderw3ls {
-	padding-bottom: 800px;
-} */
-
-/*-- //Header --*/
 
 
 /*-- About --*/
@@ -175,117 +120,34 @@ video {
 
 /*-- Speciality --*/
 
-.w3threespecialityw3ls {
-	background-color: #EEE;
-	padding: 100px 0;
-}
+.projects-header {
+  width: 100%;
+  text-align: center;
+  margin: 60px 0 10px;
+  font-weight: 200;
+  margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	}
 
-.w3threespecialityw3ls h2,h3 {
-	text-align: left;
-	margin-bottom: 30px;
-}
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+	}
 
-.grid {
-	margin: 0 auto;
-	list-style: none;
-	text-align: center;
-}
-
-.w3threespecialityw3ls-grid {
-	padding: 0;
-	text-align: left;
-}
-
-.w3threespecialityw3ls .grid figure {
-	margin: 0;
-	position: relative;
-}
-
-.w3threespecialityw3ls .grid figure .w3threespecialityw3ls-info {
-	max-width: 100%;
+.thumbnail {
 	display: block;
-	position: relative;
-}
-
-.grid figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 40px 0;
-	/*--w3layouts--*/
-	/*--agileits--*/
-	color: #EEE;
-	text-align: center;
-}
-
-.w3threespecialityw3ls figcaption {
-	background-color: #1e1e1e;
-}
-
-.grid figcaption h3 {
-	margin: 0;
-	padding: 0;
-	color: #fff;
-}
-
-.grid figcaption span:before {
-	content: 'by ';
-}
-
-.cs-style-3 figure {
-	overflow: hidden;
-}
-
-.cs-style-3 figure .w3threespecialityw3ls-info {
-	-webkit-transition: -webkit-transform 0.4s;
-	-moz-transition: -moz-transform 0.4s;
-	transition: transform 0.4s;
-}
-
-.no-touch .cs-style-3 figure:hover .w3threespecialityw3ls-info, .cs-style-3 figure.cs-hover .w3threespecialityw3ls-info {
-	-webkit-transform: translateY(-50px);
-	-moz-transform: translateY(-50px);
-	-ms-transform: translateY(-50px);
-	/*--w3layouts--*/
-	/*--agileits--*/
-	transform: translateY(-50px);
-}
-
-.cs-style-3 figcaption {
-	height: 100px;
-	width: 100%;
-	top: auto;
-	bottom: 0;
-	opacity: 0;
-	-webkit-transform: translateY(100%);
-	-moz-transform: translateY(100%);
-	-ms-transform: translateY(100%);
-	transform: translateY(100%);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-	transition: transform 0.4s, opacity 0.1s 0.3s;
-}
-
-.no-touch .cs-style-3 figure:hover figcaption, .cs-style-3 figure.cs-hover figcaption {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	-ms-transform: translateY(0px);
-	transform: translateY(0px);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
-	transition: transform 0.4s, opacity 0.1s;
-}
-
-.w3threespecialityw3ls-info {
-	text-align: center;
-	color: #EEE;
-	height: 100%;
-}
-
-.w3threespecialityw3ls-info h3 {
-	margin-top: 20px;
-	color: #009688;
+	padding: 2px 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 310px;
+  margin-bottom: 30px;
+  border-radius: 0;
+	line-height: 1.42857143;
+  border: 1px solid #ddd;
 }
 
 /*-- //Speciality --*/
@@ -393,6 +255,7 @@ video {
 /*-- Footer --*/
 
 .footer {
+	display: block;
 	background: #272727;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -403,7 +266,7 @@ video {
 	-o-background-size: cover;
 	color: #FFF;
 	margin: 0;
-	padding: 0;
+	padding: 30px 0;
 }
 
 .footer-grids {
@@ -646,7 +509,7 @@ a.to-top {
 		padding-bottom: 504px;
 	}
 
-	.agileaboutaitsabout, .w3threespecialityw3ls, .progressive-effects, .w3layoutsbooking {
+	.agileaboutaitsabout, .progressive-effects, .w3layoutsbooking {
 		padding: 75px 0;
 	}
 	.agileaboutaits h1 {
@@ -800,10 +663,10 @@ a.to-top {
 		padding-bottom: 376px;
 	}
 
-	.agileaboutaitsabout, .w3threespecialityw3ls, .progressive-effects, .w3layoutsbooking {
+	.agileaboutaitsabout, .progressive-effects, .w3layoutsbooking {
 		padding: 50px 0;
 	}
-	.agileaboutaits h1, .w3threespecialityw3ls h2, #skills h3, .w3layoutsbooking h3 {
+	.agileaboutaits h1,  #skills h3, .w3layoutsbooking h3 {
 		font-size: 30px;
 	}
 	.agileaboutaits-info {
@@ -825,10 +688,7 @@ a.to-top {
 		width: 40%;
 		top: -10%;
 	}
-	.w3threespecialityw3ls-grid {
-		width: 50%;
-		float: left;
-	}
+
 	.stats-grid {
 		width: 25%;
 		float: left;
@@ -973,10 +833,10 @@ a.to-top {
 	.agileheaderw3ls {
 		padding-bottom: 276px;
 	}
-	.agileaboutaitsabout, .w3threespecialityw3ls, .progressive-effects, .w3layoutsbooking {
+	.agileaboutaitsabout,  .progressive-effects, .w3layoutsbooking {
 		padding: 35px 0;
 	}
-	.agileaboutaits h1, .w3threespecialityw3ls h2, #skills h3, .w3layoutsbooking h3, .footer h3 {
+	.agileaboutaits h1,  #skills h3, .w3layoutsbooking h3, .footer h3 {
 		font-size: 30px;
 	}
 	.agileaboutaits button.btn {
@@ -1079,12 +939,10 @@ a.to-top {
 	.agileheaderw3ls {
 		padding-bottom: 200px;
 	}
-	.agileaboutaits h1, .w3threespecialityw3ls h2, #skills h3, .w3layoutsbooking h3, .footer h3 {
+	.agileaboutaits h1,  #skills h3, .w3layoutsbooking h3, .footer h3 {
 		font-size: 25px;
 	}
-	.w3threespecialityw3ls-grid {
-		width: 100%;
-	}
+
 	.stats-info p {
 		font-size: 13px;
 	}
@@ -1174,7 +1032,7 @@ a.to-top {
 	.cd-bouncy-nav a {
 		padding: 70px 0 0;
 	}
-	.agileaboutaits h1, .w3threespecialityw3ls h2, #skills h3, .w3layoutsbooking h3, .footer h3 {
+	.agileaboutaits h1,  #skills h3, .w3layoutsbooking h3, .footer h3 {
 		font-size: 23px;
 	}
 	figure.effect-bubba figcaption::before, figure.effect-bubba figcaption::after {

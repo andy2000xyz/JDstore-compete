@@ -20,11 +20,14 @@
 
       <div class="productDetail-right">
         <h3> <%= @product.title %> </h3>
+        <div>
+          <span style="padding-right: 50px"> <i class="fa fa-heart" style="color: red" aria-hidden="true"></i>（93）</span>
+          <span>讲师：<a href="">李剑</a></span>
+        </div>
           <div class="show-page description">
-          <p><%= @product.description %></p>
+          <p style="height: 130px"><%= @product.description %></p>
           </div>
-          <!-- <div class="product-quantity"> 数量 : <%= @product.quantity %>
-          </div> -->
+            <span><p>分享至：</p><%= social_share_button_tag(@product.title) %></span>
           <div class="product-price"> ￥ <%= @product.price %>
           </div>
           <div class="pull-left">
@@ -34,16 +37,7 @@
                 已销售一空，无法购买
               <% end %>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <p> <i class="fa fa-heart" style="color: red" aria-hidden="true"></i> 收藏（3）</p>
-              </div>
-              <div class="col-md-3">
-                <%= social_share_button_tag(@product.title) %>
-              </div>
-            </div>
-          </div>
+
       </div>
     </div>
 
@@ -52,7 +46,6 @@
     <div class="productDecription">
       <div class="row">
         <div class="col-md-9 col-sm-4">
-
           <p><%= sanitize @product.detail %></p>
 
         </div>
