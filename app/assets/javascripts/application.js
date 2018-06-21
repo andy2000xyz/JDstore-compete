@@ -11,9 +11,11 @@
 // about supported directives.
 //
 
+
 //= require jquery.min
+
 //= require bootstrap-sprockets
-//= require bootstrap.min
+//= require bootstrap
 
 
 //= require ckeditor/init

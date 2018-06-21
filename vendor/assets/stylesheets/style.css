@@ -266,7 +266,8 @@ video {
 	-o-background-size: cover;
 	color: #FFF;
 	margin: 0;
-	padding: 30px 0;
+	padding: 20px 0;
+
 }
 
 .footer-grids {
@@ -293,7 +294,7 @@ video {
 	/*--agileits--*/
 	line-height: 30px;
 	color: #CCC;
-	font-family: 'Open Sans', sans-serif;
+
 }
 
 
