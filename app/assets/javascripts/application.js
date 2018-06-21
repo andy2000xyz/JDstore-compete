@@ -25,7 +25,7 @@
 
 //= require cbpFWTabs
 //= require main
-//= require modernizr
+
 //= require mousescroll
 //= require move-top
 
@@ -36,6 +36,6 @@
 
 //= require social-share-button
 //= require social-share-button/wechat
-//= require jquery.qrcode.min.js
+
 
 //= require cable
