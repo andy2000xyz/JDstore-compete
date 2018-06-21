@@ -17,7 +17,6 @@
         <% end %>
       </div>
 
-
       <div class="productDetail-right">
         <h3> <%= @product.title %> </h3>
         <div>
@@ -37,6 +36,7 @@
               <% else %>
                 已销售一空，无法购买
               <% end %>
+            <a href="https://study.163.com/course/introduction/1004035014.htm">  <span>立即参加</span></a>
           </div>
 
       </div>
@@ -55,7 +55,7 @@
             <p>发布于:</p><span><%= @product.created_at.strftime("%Y/%m/%d %I:%M %p") %></span>
             <p>更新于:</p><span><%= @product.updated_at.strftime("%Y/%m/%d %I:%M %p") %></span>
 
-            <h4>相关课程</h4>
+            <h4>依赖知识</h4>
               <li>Excel</li>
               <li>Power Query</li>
               <li>Power Pivot</li>
