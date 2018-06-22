@@ -17,10 +17,10 @@ Rails.application.routes.draw do
   end
 
   resources :blogs do
+    resources :comments, only: [:create, :destroy]
     collection do
       get :search
     end
-    resources :comments
   end
 
 
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   end
 
   resources :cart_items
-  
+
   resources :carts do
    collection do
       delete :clean

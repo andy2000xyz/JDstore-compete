@@ -3,6 +3,7 @@ class Blog < ApplicationRecord
   # ranks :row_order
 
   validates :title, presence: true, length: { minimum: 3 }
+  validates :content, presence: true, length: { minimum: 3 }
   has_many :comments, dependent: :destroy
   belongs_to :category, :optional => true
 
