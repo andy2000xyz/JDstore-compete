@@ -12,11 +12,12 @@
 //
 
 //= require jquery.min
+//= require bootstrap-sprockets
+//= require bootstrap
 //= require jquery_ujs
 //= require jquery.inview.min
 
-//= require bootstrap-sprockets
-//= require bootstrap
+
 
 //= require cbpFWTabs
 

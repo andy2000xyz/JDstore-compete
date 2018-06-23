@@ -1,6 +1,8 @@
 //= require jquery.min
-//= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap
-//= require bootstrap.min
+//= require jquery_ujs
+
+//= require cbpFWTabs
+
 //= require ckeditor/init
