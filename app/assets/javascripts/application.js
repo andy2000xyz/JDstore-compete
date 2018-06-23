@@ -11,33 +11,21 @@
 // about supported directives.
 //
 
-
 //= require jquery.min
+//= require jquery_ujs
+//= require jquery.inview.min
 
 //= require bootstrap-sprockets
 //= require bootstrap
 
-
-//= require ckeditor/init
-
-//= require jquery_ujs
-//= require jquery.flexslider
-//= require jquery.inview.min
-
-
 //= require cbpFWTabs
+
 //= require main
-
 //= require mousescroll
-//= require move-top
-
 //= require wow.min
+//= require move-top
 
 //= require echarts
 
-
 //= require social-share-button
 //= require social-share-button/wechat
-
-
-//= require cable
