@@ -3,7 +3,16 @@ class BlogsController < ApplicationController
 before_action :validate_search_key, only: [:search]
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order("id DESC").all
+
+    if params[:max_id]
+      @blogs = @blogs.where( "id < ?", params[:max_id])
+    end
+
+    respond_to do |format|
+      format.html  # 如果客户端要求 HTML，则回传 index.html.erb
+      format.js    # 如果客户端要求 JavaScript，回传 index.js.erb
+    end
   end
 
   def show

@@ -18,8 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-# gem 'turbolinks', '~> 5'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -49,7 +48,7 @@ gem "fog-aws"
 gem 'ckeditor'
 gem 'ranked-model'
 gem 'will_paginate'
-
+gem 'rest-client'
 
 
 group :development, :test do
@@ -64,6 +63,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'brakeman'
   gem 'pry-rails'
+  gem 'faker'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   #gem 'spring'
   #gem 'spring-watcher-listen', '~> 2.0.0'

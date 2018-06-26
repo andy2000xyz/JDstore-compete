@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style type="text/css">
+  #main{
+    height: 500px;
+    border: 1px solid #ccc;
+    padding: : 10px;
+  }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js"></script>
+
+</head>
+<body>
+  <div class="container" id="main" style="height: 600px">
+  </div>
+
+  <script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+
+    $.ajax({
+        url: '/stock.json',
+        method: 'get',
+        dataType: 'json', // 要求服务器回传 json
+      })
+    .fail(function() {
+        console.log("error");
+    })
+    .always(function() {
+      console.log("complete");
+    })
+
+    // var schema = [
+    //     {name: 'echart_number', index: 0, text: '证券代码'},
+    //     {name: 'stock_name', index: 1, text: '证券名称'},
+    //     {name: 'stock_industry', index: 2, text: '行业分类三级'},
+    //     {name: 'holders_change_q1', index: 3, text: '股东户数变动率（1季报）'},
+    //     {name: 'top10_holders_change_q1 ', index: 4, text: '前十大股东持股变动（1季报）'},
+    //     {name: 'net_profit_inc_3', index: 5, text: '净利润复合增长率（最近3年）'},
+    //     {name: 'rev_inc_3', index: 6, text: '营业收入复合增长率（最近3年）'},
+    //     {name: 'ROE_last_FS', index: 7, text: '年化净资产收益率（去年年报）'},
+    //     {name: 'sales_mg_q1', index: 8, text: '销售毛利率（1季报）'},
+    //     {name: 'sales_nmg_q1', index: 9, text: '销售净利率（1季报）'},
+    //     {name: 'rev_inc_q1', index: 10, text: '营业收入同比增长率（1季报）'},
+    //     {name: 'amount_of_inc', index: 11, text: '年初至今涨幅'},
+    //
+    // ];
+    //
+    // var itemStyle = {
+    //     normal: {
+    //         opacity: 0.8,
+    //         shadowBlur: 10,
+    //         shadowOffsetX: 0,
+    //         shadowOffsetY: 0,
+    //         shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //     }
+    // };
+    //
+    //
+    //         option = {
+    //             title : {
+    //                 text : '2018股票池参考指标',
+    //                 subtext : 'dataZoom支持'
+    //             },
+    //
+    //             color: [
+    //                 '#dd4444', '#fec42c', '#80F1BE'
+    //             ],
+    //
+    //             toolbox: {
+    //             show: true,
+    //             feature: {
+    //                 dataZoom: {
+    //                     yAxisIndex: 'none'
+    //                 },
+    //                 dataView: {readOnly: false},
+    //                 restore: {},
+    //                 saveAsImage: {}
+    //                 }
+    //             },
+    //             grid: {
+    //                 show: false,
+    //                 containLabel: true,
+    //                 x: '10%',
+    //                 x2: '10%',
+    //                 y: '18%',
+    //                 y2: '10%'
+    //             },
+    //             tooltip: {
+    //                 padding: 10,
+    //                 backgroundColor: '#222',
+    //                 borderColor: '#777',
+    //                 borderWidth: 1,
+    //                 axisPointer: {
+    //                     type: 'cross',
+    //                     label:{
+    //                         show: true,
+    //                         backgroundColor: '#222',
+    //                         color: '#fff'
+    //                     }
+    //                 },
+    //                 formatter: function (obj) {
+    //                     var value = obj.value;
+    //                     return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
+    //                         + obj.seriesName + ' ' + value[0] + ' '
+    //                         + value[1]
+    //                         + '</div>'
+    //                         + schema[2].text + '：' + value[2] + '<br>'
+    //                         + schema[3].text + '：' + value[3] + '%' + '<br>'
+    //                         + schema[4].text + '：' + value[4] + '%' + '<br>'
+    //                         + schema[5].text + '：' + value[5] + '%' + '<br>'
+    //                         + schema[6].text + '：' + value[6] + '%' + '<br>'
+    //                         + schema[7].text + '：' + value[7] + '%' + '<br>'
+    //                         + schema[8].text + '：' + value[8] + '%' + '<br>'
+    //                         + schema[9].text + '：' + value[9] + '%' + '<br>'
+    //                         + schema[10].text + '：' + value[10] + '%' + '<br>'
+    //                         + schema[11].text + '：' + value[11] + '%' + '<br>';
+    //                 }
+    //             },
+    //             xAxis: {
+    //                 type: 'value',
+    //                 name: '股东户数变动率',
+    //                 nameGap: 16,
+    //                 nameTextStyle: {
+    //                     color: '#fff',
+    //                     fontSize: 12
+    //                 },
+    //                 scale: true,
+    //                 inverse: true,
+    //                 splitLine: {
+    //                     show: false
+    //                 },
+    //                 axisLine: {
+    //                     lineStyle: {
+    //                         color: '#eee'
+    //                     }
+    //                 },
+    //                 axisLabel: {
+    //                     show: true,
+    //                     color: '#eee'
+    //                 },
+    //             },
+    //             yAxis: {
+    //                 type: 'value',
+    //                 name: '前十大股东持股变动',
+    //                 nameLocation: 'end',
+    //                 nameGap: 20,
+    //                 nameTextStyle: {
+    //                     color: '#fff',
+    //                     fontSize: 12
+    //                 },
+    //                 scale: true,
+    //                 axisLine: {
+    //                     lineStyle: {
+    //                         color: '#eee'
+    //                     }
+    //                 },
+    //                 axisLabel: {
+    //                     show: true,
+    //                     color: '#eee'
+    //                 },
+    //                 splitLine: {
+    //                     show: false
+    //                 }
+    //             },
+    //             dataZoom: [
+    //             {
+    //                 type: 'slider',
+    //                 show: true,
+    //                 xAxisIndex: [0],
+    //                 start: 40,
+    //                 end: 80
+    //             },
+    //             {
+    //                 type: 'slider',
+    //                 show: true,
+    //                 yAxisIndex: [0],
+    //                 left: '3%',
+    //                 start: 10,
+    //                 end: 50
+    //             },
+    //             {
+    //                 type: 'inside',
+    //                 xAxisIndex: [0],
+    //                 start: 40,
+    //                 end: 80
+    //             },
+    //             {
+    //                 type: 'inside',
+    //                 yAxisIndex: [0],
+    //                 start: 10,
+    //                 end: 50
+    //             }
+    //         ],
+    //             visualMap: [
+    //                 {
+    //                     left: 'right',
+    //                     top: '10%',
+    //                     dimension: 11,
+    //                     min: 0,
+    //                     max: 100,
+    //                     itemWidth: 30,
+    //                     itemHeight: 120,
+    //                     calculable: true,
+    //                     precision: 0.1,
+    //                     text: ['气泡大小：年初至今涨幅'],
+    //                     textGap: 30,
+    //                     textStyle: {
+    //                         color: '#fff'
+    //                     },
+    //                     inRange: {
+    //                         symbolSize: [10, 70]
+    //                     },
+    //                     outOfRange: {
+    //                         symbolSize: [10, 70],
+    //                         color: ['rgba(255,255,255,.2)']
+    //                     },
+    //                     controller: {
+    //                         inRange: {
+    //                             color: ['#c23531']
+    //                         },
+    //                         outOfRange: {
+    //                             color: ['#444']
+    //                         }
+    //                     }
+    //                 },
+    //                 {
+    //                     left: 'right',
+    //                     bottom: '10%',
+    //                     dimension: 9,
+    //                     min: 0,
+    //                     max: 100,
+    //                     itemHeight: 120,
+    //                     calculable: true,
+    //                     precision: 0.1,
+    //                     text: ['明暗：销售净利率（1季报）'],
+    //                     textGap: 30,
+    //                     textStyle: {
+    //                         color: '#fff'
+    //                     },
+    //                     inRange: {
+    //                         colorLightness: [1, 0.5]
+    //                     },
+    //                     outOfRange: {
+    //                         color: ['rgba(255,255,255,.2)']
+    //                     },
+    //                     controller: {
+    //                         inRange: {
+    //                             color: ['#c23531']
+    //                         },
+    //                         outOfRange: {
+    //                             color: ['#444']
+    //                         }
+    //                     }
+    //                 }
+    //             ],
+    //             series: [
+    //                 {
+    //                     name: '',
+    //                     type: 'scatter',
+    //                     itemStyle: itemStyle,
+    //                     label:{
+    //                         show: true,
+    //                         position: 'top',
+    //                         offset: [30,0],
+    //                         formatter: '{@[1]}'
+    //
+    //                     },
+    //                     encode: {
+    //                         // data 中『维度3』对应到 X 轴
+    //                         x: 3,
+    //                         // data 中『维度4』对应到 Y 轴
+    //                         y: 4,
+    //                     },
+    //                     data: []
+    //                 },
+    //
+    //             ]
+    //         };
+  </script>
+
+</body>
+</html>
