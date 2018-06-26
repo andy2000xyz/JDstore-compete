@@ -1,0 +1,2 @@
+module EchartsHelper
+end

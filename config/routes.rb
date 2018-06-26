@@ -53,8 +53,11 @@ Rails.application.routes.draw do
     resources :orders
   end
 
-  get 'static_pages/echart'
-
+  get "echarts/echart-1" => "echarts#echart_1"
+  get "echarts/echart-2" => "echarts#echart_2"
+  get "echarts/echart-3" => "echarts#echart_3"
+  get "echarts/echart-4" => "echarts#echart_4"
+  get "echarts/echart-5" => "echarts#echart_5"
 
   root 'welcome#index'
 end
