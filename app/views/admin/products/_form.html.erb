@@ -19,6 +19,10 @@
   </div>
 
   <div class="group">
+    <%= f.input :sub_info, as: :ckeditor %>
+  </div>
+
+  <div class="group">
     <%#= f.input :image, as: :file %>
     <%= f.label :avatar %><br>
     <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
