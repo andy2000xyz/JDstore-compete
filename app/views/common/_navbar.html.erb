@@ -9,23 +9,23 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
-          <a class="navbar-products" href="/products">学习</a>
+          <a class="navbar-products" title="服务" href="/products">学习</a>
           <!-- <%= link_to(content_tag(:i, 'Products', class: 'fa fa-camera'), products_path, method: :get) %> 两种写法都可以-->
         </li>
         <li>
-           <a class="navbar-products" href="/static_pages/echart">图表</a>
+           <a class="navbar-products" title="体验" href="/static_pages/echart">图例</a>
         </li>
         <li>
-           <a class="navbar-products" href="/blogs">博客</a>
+           <a class="navbar-products" title="创作" href="/blogs">博客</a>
         </li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-         <li>
+         <!-- <li>
            <%= link_to carts_path do  %>
            <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
            <% end %>
-         </li>
+         </li> -->
             <% if !current_user %>
               <li><a href="#" data-toggle="modal" data-target="#signup-modal"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
 

@@ -17,13 +17,9 @@
 //= require bootstrap-sprockets
 //= require bootstrap
 
-
-//= require ckeditor/init
-
 //= require jquery_ujs
 //= require jquery.flexslider
 //= require jquery.inview.min
-
 
 //= require cbpFWTabs
 //= require main
@@ -35,9 +31,9 @@
 
 //= require echarts
 
-
 //= require social-share-button
 //= require social-share-button/wechat
 
+//= require ckeditor/init
 
 //= require cable

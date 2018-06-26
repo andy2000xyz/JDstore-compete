@@ -14,13 +14,13 @@
       <div class="previous"><%= link_to "上一篇：#{@previous.title}", blog_path(@previous) %></div>
       <div class="next"><%= link_to "下一篇：#{@next.title}", blog_path(@next) %></div><br>
       <h4>历史文章</h4>
-      <ol class="list-unstyled">
+      <ul>
         <% @blogs.each do |blog| %>
           <li>
             <%= link_to blog.title, blog_path(blog) %>
           </li>
         <% end %>
-      </ol>
+      </ul>
 
     </div>
 
@@ -29,16 +29,16 @@
       <hr>
       <h2><%= @blog.title %></h2><br>
       <h5>作者：<%=@blog.author %></h5>
-      <h5><span class="glyphicon glyphicon-time"></span><%= @blog.created_at.strftime("%Y/%m/%d %I:%M %p") %></h5>
+      <h5>发表时间：<%= @blog.created_at.strftime("%Y/%m/%d %I:%M %p") %></h5>
       <h5><span class="label label-danger"><%= @blog.category.try(:name) %></span></h5><br>
       <p><%= sanitize @blog.content %></p><br>
 
       <hr>
       <span class="pull-right"><%= social_share_button_tag(@blog.title) %></span><br>
-      <h4>Leave a Comment:</h4>
+      <!-- <h4>Leave a Comment:</h4>
       <%= render :partial => "comments/form" %><br>
       <p><span class="badge"><%= @blog.comments.count %></span> Comments:</p><br>
-      <%= render :partial => "comments/comment" %>
+      <%= render :partial => "comments/comment" %> -->
 
     </div>
   </div>
