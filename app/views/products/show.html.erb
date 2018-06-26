@@ -56,9 +56,8 @@
             <p>更新于:</p><span><%= @product.updated_at.strftime("%Y/%m/%d %I:%M %p") %></span>
 
             <h4>依赖知识</h4>
-              <li>Excel</li>
-              <li>Power Query</li>
-              <li>Power Pivot</li>
+              <p><%= sanitize @product.sub_info %></p>
+
           </div>
         </div>
       </div>

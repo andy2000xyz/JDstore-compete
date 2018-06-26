@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.js"></script>
+
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;}
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-md-3 col-sm-3 sidenav hidden-xs">
+      <h3><img src="/images/logo2.png" alt="数据实验室"></h3>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="chart-1">股票投资</a></li>
+        <li><a href="chart-2">新能源汽车</a></li>
+        <li><a href="chart-3">汽车行业从业人员</a></li>
+        <li class="active"><a href="chart-4">汽车价格走势</a></li>
+      </ul><br>
+
+    </div>
+
+    <div class="col-md-9 col-sm-9">
+      <div class="well">
+        <!-- <h4>Dashboard</h4> -->
+
+        <div class="container" id="main" style="height: 600px">
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

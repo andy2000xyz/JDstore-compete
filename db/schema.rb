@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180625085614) do
+ActiveRecord::Schema.define(version: 20180626114724) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -55,22 +55,13 @@ ActiveRecord::Schema.define(version: 20180625085614) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "echarts", force: :cascade do |t|
-    t.string   "number"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.string   "stock_name"
-    t.string   "stock_industry"
-    t.string   "holders_change_q1"
-    t.string   "top10_holders_change_q1"
-    t.string   "net_profit_inc_3"
-    t.string   "rev_inc_3"
-    t.string   "ROE_last_FS"
-    t.string   "sales_mg_q1"
-    t.string   "sales_nmg_q1"
-    t.string   "rev_inc_q1"
-    t.string   "amount_of_inc"
-    t.index ["number"], name: "index_echarts_on_number"
+  create_table "likes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_likes_on_product_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -114,6 +105,8 @@ ActiveRecord::Schema.define(version: 20180625085614) do
     t.datetime "updated_at",  null: false
     t.string   "image"
     t.text     "detail"
+    t.text     "sub_info"
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -53,20 +53,15 @@ Rails.application.routes.draw do
     resources :orders
   end
 
-  get 'static_pages/echart'
-  get 'static_pages/test'
+  get "/echarts/chart-1" => "echarts#chart_1"
+  get "/echarts/chart-2" => "echarts#chart_2"
+  get "/echarts/chart-3" => "echarts#chart_3"
+  get "/echarts/chart-4" => "echarts#chart_4"
+  get "/echarts/chart-5" => "echarts#chart_5"
 
 
   root 'welcome#index'
 
-
-  namespace :api, :defaults => { :format => :json } do
-    namespace :v1 do
-      get "/echarts"  => "echarts#index", :as => :echarts
-      get "/echarts/:echart_number" => "echarts#show", :as => :echart
-
-    end
-  end
 end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

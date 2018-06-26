@@ -1,9 +1,9 @@
 
 <% @blog.comments.each do |comment| %>
-  <div class="col-sm-2 text-center">
+  <div class="col-sm-2 col-md-2 text-center">
     <img src="/" class="img-circle" height="65" width="65" alt="Avatar">
   </div>
-  <div class="col-sm-10">
+  <div class="col-sm-10 col-md-10 ">
     <h4><%= comment.commenter %> <small><%= comment.try(:created_at).try(:strftime, "%Y/%m/%d %I:%M %p") %></small></h4>
     <h4><%= comment.blog_id %></h4>
     <p><%= comment.body %></p>

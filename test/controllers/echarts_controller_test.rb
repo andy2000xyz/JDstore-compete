@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class EchartTest < ActiveSupport::TestCase
+class EchartsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
